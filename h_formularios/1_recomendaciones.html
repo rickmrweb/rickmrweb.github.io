@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="/js/config.js"></script>
+  <link rel="icon" sizes="32x32" href="/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <script type="module" src="/lib/muestra-codigo.js"></script>
+</head>
+<body>
+  <layout-cajon>
+    <mi-nav slot="nav"></mi-nav>
+    <h1>Recomendaciones con switch y default</h1>
+    <div class="horizontal">
+      <div>
+        <h2>Salida.</h2>
+        <p>
+          <a href="https://drive.google.com/file/d/1DmiBDFsLyEY_0VPECwoHUJUnvxHM1qNL/view?usp=sharing"
+              target="_blank">Video de como depurar este ejemplo.</a>
+        </p>
+        <iframe src="src/7_switch_default.html" height="1000"></iframe>
+        <p>
+          <a href="src/7_switch_default.html" target="_blank">Ábrelo en otra
+            pestaña.</a>
+        </p>
+      </div>
+      <muestra-codigo>
+        <div>
+          <div><span style="color: #800000;">&lt;!DOCTYPE</span>&nbsp;<span
+                style="color: #ff0000;">html</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div><span style="color: #800000;">&lt;html</span>&nbsp;<span
+                style="color: #ff0000;">lang</span>=<span
+                style="color: #0000ff;">"es"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div><span style="color: #800000;">&lt;head&gt;</span></div>
+          <div>&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;meta</span>&nbsp;<span
+                style="color: #ff0000;">charset</span>=<span
+                style="color: #0000ff;">"UTF-8"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;meta</span>&nbsp;<span
+                style="color: #ff0000;">name</span>=<span
+                style="color: #0000ff;">"viewport"</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #ff0000;">content</span>=<span
+                style="color: #0000ff;">"width=device-width,</span></div>
+          <div><span
+                style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;initial-scale=1"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;<span style="color: #800000;">&lt;title&gt;</span>
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;Recomiendo&nbsp;artistas</div>
+          <div>&nbsp;&nbsp;<span style="color: #800000;">&lt;/title&gt;</span>
+          </div>
+          <div><span style="color: #800000;">&lt;/head&gt;</span></div>
+          <div><span style="color: #800000;">&lt;body&gt;</span></div>
+          <div>&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;form</span>&nbsp;<span
+                style="color: #ff0000;">action</span>=<span
+                style="color: #0000ff;">"javascript:</span></div>
+          <div><span
+                style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recomienda();"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;h1&gt;</span>Recomiendo&nbsp;artistas<span
+                style="color: #800000;">&lt;/h1&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;p&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;label&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Género</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;select</span>&nbsp;<span
+                style="color: #ff0000;">id</span>=<span
+                style="color: #0000ff;">género</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #ff0000;">required</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;option</span>&nbsp;<span
+                style="color: #ff0000;">value</span>=<span
+                style="color: #0000ff;">""</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Selecciona&nbsp;--
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/option&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;option</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #ff0000;">value</span>=<span
+                style="color: #0000ff;">"reguetón"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reguetón
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/option&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;option</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #ff0000;">value</span>=<span
+                style="color: #0000ff;">"mariachi"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mariachi
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/option&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;option</span>&nbsp;<span
+                style="color: #ff0000;">value</span>=<span
+                style="color: #0000ff;">"pop"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pop
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/option&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;option</span>&nbsp;<span
+                style="color: #ff0000;">value</span>=<span
+                style="color: #0000ff;">"tango"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tango
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/option&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;option</span>&nbsp;<span
+                style="color: #ff0000;">value</span>=<span
+                style="color: #0000ff;">"balada"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Balada
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/option&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/select&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/label&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/p&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;p&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;button&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recomendar</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/button&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/p&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;figure</span>&nbsp;<span
+                style="color: #ff0000;">id</span>=<span
+                style="color: #0000ff;">"ariana"</span>&nbsp;<span
+                style="color: #ff0000;">hidden</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;figcaption&gt;</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ariana&nbsp;Grande
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/figcaption&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;img</span>&nbsp;<span
+                style="color: #ff0000;">alt</span>=<span
+                style="color: #0000ff;">"Imagen&nbsp;de&nbsp;Ariana</span></div>
+          <div><span
+                style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grande"</span>
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #ff0000;">src</span>=<span
+                style="color: #0000ff;">"https://media.giphy.com/media/Ek42177e6xAeCnh8HX/giphy.gif"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/figure&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;figure</span>&nbsp;<span
+                style="color: #ff0000;">id</span>=<span
+                style="color: #0000ff;">"badBunny"</span>&nbsp;<span
+                style="color: #ff0000;">hidden</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;figcaption&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bad&nbsp;Bunny
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/figcaption&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;img</span>&nbsp;<span
+                style="color: #ff0000;">alt</span>=<span
+                style="color: #0000ff;">"Imagen&nbsp;de&nbsp;Bad</span></div>
+          <div><span
+                style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bunny"</span>
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #ff0000;">src</span>=<span
+                style="color: #0000ff;">"https://media.giphy.com/media/kfcsiSjQUyMvEZ1khq/giphy.gif"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/figure&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;figure</span>&nbsp;<span
+                style="color: #ff0000;">id</span>=<span
+                style="color: #0000ff;">"juanga"</span>&nbsp;<span
+                style="color: #ff0000;">hidden</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;figcaption&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Juan&nbsp;Gabriel
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/figcaption&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;img</span>&nbsp;<span
+                style="color: #ff0000;">alt</span>=<span
+                style="color: #0000ff;">"Imagen&nbsp;de&nbsp;Juan</span></div>
+          <div><span
+                style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gabriel"</span>
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #ff0000;">src</span>=<span
+                style="color: #0000ff;">"https://media.giphy.com/media/3o6ZsYyNQumUyS9t72/giphy.gif"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/figure&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;figure</span>&nbsp;<span
+                style="color: #ff0000;">id</span>=<span
+                style="color: #0000ff;">"noSe"</span>&nbsp;<span
+                style="color: #ff0000;">hidden</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;figcaption&gt;</span></div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No&nbsp;lo&nbsp;sé
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/figcaption&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;img</span>&nbsp;<span
+                style="color: #ff0000;">alt</span>=<span
+                style="color: #0000ff;">"Imagen&nbsp;de&nbsp;que&nbsp;no</span>
+          </div>
+          <div><span
+                style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lo&nbsp;sé"</span>
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #ff0000;">src</span>=<span
+                style="color: #0000ff;">"https://media.giphy.com/media/VbVfYbxE0gOK5Qsjkc/giphy.gif"</span><span
+                style="color: #800000;">&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/figure&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;footer&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;p&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #0000ff;">&amp;copy;</span>&nbsp;2020</div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gilberto&nbsp;Pacheco&nbsp;Gallegos.
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/p&gt;</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #800000;">&lt;/footer&gt;</span></div>
+          <div>&nbsp;&nbsp;<span style="color: #800000;">&lt;/form&gt;</span>
+          </div>
+          <div>&nbsp;&nbsp;<span style="color: #800000;">&lt;script&gt;</span>
+          </div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #0000ff;">function</span>&nbsp;<span
+                style="color: #795e26;">recomienda</span>()&nbsp;{</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #0000ff;">const</span>&nbsp;<span
+                style="color: #0070c1;">figs</span>&nbsp;=&nbsp;<span
+                style="color: #001080;">document</span>.</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #795e26;">querySelectorAll</span>(</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #a31515;">"figure"</span>);</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">for</span>&nbsp;(<span
+                style="color: #0000ff;">const</span>&nbsp;<span
+                style="color: #0070c1;">f</span>&nbsp;<span
+                style="color: #0000ff;">of</span></div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #267f99;">Array</span>.<span
+                style="color: #795e26;">from</span>(<span
+                style="color: #0070c1;">figs</span>))&nbsp;{</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #0070c1;">f</span>.<span
+                style="color: #001080;">hidden</span>&nbsp;=&nbsp;<span
+                style="color: #0000ff;">true</span>;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">switch</span>&nbsp;(<span
+                style="color: #001080;">género</span>.<span
+                style="color: #001080;">value</span>)&nbsp;{</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">case</span>&nbsp;<span
+                style="color: #a31515;">"pop"</span>:</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #001080;">ariana</span>.<span
+                style="color: #001080;">hidden</span>&nbsp;=&nbsp;<span
+                style="color: #0000ff;">false</span>;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">case</span>&nbsp;<span
+                style="color: #a31515;">"balada"</span>:</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">case</span>&nbsp;<span
+                style="color: #a31515;">"mariachi"</span>:</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #001080;">juanga</span>.<span
+                style="color: #001080;">hidden</span>&nbsp;=&nbsp;<span
+                style="color: #0000ff;">false</span>;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">break</span>;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">case</span>&nbsp;<span
+                style="color: #a31515;">"reguetón"</span>:</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #001080;">badBunny</span>.<span
+                style="color: #001080;">hidden</span>&nbsp;=&nbsp;<span
+                style="color: #0000ff;">false</span>;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">break</span>;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">default</span>:</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #001080;">noSe</span>.<span
+                style="color: #001080;">hidden</span>&nbsp;=&nbsp;<span
+                style="color: #0000ff;">false</span>;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color: #af00db;">break</span>;</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+          <div>&nbsp;&nbsp;<span style="color: #800000;">&lt;/script&gt;</span>
+          </div>
+          <div><span style="color: #800000;">&lt;/body&gt;</span></div>
+          <div><span style="color: #800000;">&lt;/html&gt;</span></div>
+        </div>
+      </muestra-codigo>
+    </div>
+    <mi-footer></mi-footer>
+  </layout-cajon>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="/js/config.js"></script>
+  <link rel="icon" sizes="32x32" href="/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <layout-cajon>
+    <mi-nav slot="nav"></mi-nav>
+    <h1>Agregar documentos</h1>
+    <div class="marco-lectura">
+      <h2>Agregar documento generando id</h2>
+      <pre><code class="language-javascript">const data = {
+  nombre: "pp",
+  dirección: "su casa"
+};
+const refNuevoDoc = await refCol.add(data);
+console.log(refNuevoDoc.id);</code></pre>
+      <h2>Agregar documento cuando se conoce el id</h2>
+      <pre><code class="language-javascript">const id ="lkjlkjjl";
+const data = {
+  nombre: "qk"
+  dirección: "mi casa"
+};
+await refCol.doc(id).set(data);</code></pre>
+    </div>
+    <mi-footer></mi-footer>
+  </layout-cajon>
+</body>
+</html>

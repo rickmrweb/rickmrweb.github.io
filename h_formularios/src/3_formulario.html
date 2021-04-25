@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+       initial-scale=1.0">
+  <title>División</title>
+</head>
+<body>
+  <form
+    action="javascript:divide();">
+    <h1>División</h1>
+    <!--
+      El tipo de elemento "input"
+      es un campo de captura de
+      texto.
+    -->
+    <p>
+      <label>
+        a
+        <input id="inA"
+          type="number"
+          step="0.1"
+          required>
+      </label>
+    </p>
+    <p>
+      <label>
+        b
+        <input id="inB"
+          type="number"
+          step="0.1"
+          required
+          oninput="validaB();">
+      </label>
+    </p>
+    <p>
+      <button>
+        Dividir
+      </button>
+    </p>
+    <p>
+      <output id=outSalida>
+      </output>
+    </p>
+    <footer>
+      <p>
+        &copy; 2020
+        Gilberto Pacheco Gallegos.
+      </p>
+    </footer>
+  </form>
+  <script>
+    const NO_0 = "No puede ser 0";
+
+    function validaB() {
+      const b = inB.valueAsNumber;
+      /* Debe cumplirse que b
+       * sea un número diferente
+       * de 0. */
+      if (isNaN(b) || b !== 0) {
+        inB.setCustomValidity("");
+      } else {
+        inB.setCustomValidity(NO_0);
+      }
+    }
+
+    function divide() {
+      try {
+        if (inA.validity.valid &&
+          inB.validity.valid) {
+          /* El atributo "value"
+           * de un "input" se
+           * puede usar desde
+           * JavaScript y desde
+           * HTML y devuelve un
+           * string.
+           * Para los números se
+           * puede usar
+           * "valueAsNumber". Si
+           * el texto es una
+           * cadena vacía o no
+           * representa un número,
+           * el valor devuelto es
+           * NaN (o sea no es un
+           * número). */
+          const a =
+            inA.valueAsNumber;
+          const b =
+            inB.valueAsNumber;
+          outSalida.value =
+            a / b;
+        } else {
+          outSalida.value = "";
+        }
+      } catch (e) {
+        console.error(e);
+        outSalida.value =
+          e.message;
+      }
+    }
+  </script>
+</body>
+</html>

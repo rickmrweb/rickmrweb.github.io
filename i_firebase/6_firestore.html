@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="/js/config.js"></script>
+  <link rel="icon" sizes="32x32" href="/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <layout-cajon>
+    <mi-nav slot="nav"></mi-nav>
+    <h1>Sistema Firestore</h1>
+    <div class="marco-lectura">
+      <p>
+        La clase
+        <a href="https://firebase.google.com/docs/reference/js/firebase.firestore.Firestore"
+          target="_blank">firebase.firestore.Firestore</a>
+        se conecta al sistema Firestore, que es una base de datos de tiempo real
+        de Firebase.
+      </p>
+      <h2>Obtener la instancia</h2>
+      <div>
+        <code
+          class="language-javascript">const firestore = firebase.firestore();</code>
+      </div>
+    </div>
+    <mi-footer></mi-footer>
+  </layout-cajon>
+</body>
+</html>

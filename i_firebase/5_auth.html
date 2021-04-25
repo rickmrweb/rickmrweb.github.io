@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="/js/config.js"></script>
+  <link rel="icon" sizes="32x32" href="/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <layout-cajon>
+    <mi-nav slot="nav"></mi-nav>
+    <h1>Sistema Auth</h1>
+    <div class="marco-lectura">
+      <p>
+        La clase
+        <a href="https://firebase.google.com/docs/reference/js/firebase.auth.Auth"
+          target="_blank">firebase.auth.Auth</a>
+        se conecta al sistema de autenticación de Firebase.
+      </p>
+      <h2>Obtener la instancia</h2>
+      <div>
+        <code class="language-javascript">const auth = firebase.auth();</code>
+      </div>
+      <h2>Iniciar sesión con un AuthProvider</h2>
+      <div>
+        <code
+          class="language-javascript">await auth.signInWithRedirect(provider);</code>
+      </div>
+      <p>
+        Salta a la página de autenticación del proveedor y cuando entra a sesión
+        termina.
+      </p>
+      <h2>Terminar sesión</h2>
+      <div>
+        <code class="language-javascript">await auth.signOut();</code>
+      </div>
+      <h2>Escuchar notificaciones cuando hay un cambio de usuario</h2>
+      <div>
+        <code
+          class="language-javascript">auth.onAuthStateChanged(fnUsuario, fnError);</code>
+      </div>
+      <p>donde:</p>
+      <dl>
+        <dt>fnUsuario</dt>
+        <dd>
+          <p>
+            Es una función invocada cuando cambia el usuario en sesión y recibe
+            como parámetro la referencia a un objeto. Si la sesión está cerrada,
+            la referencia vale
+            <code class="language-javascript">null</code>. Si se ha iniciado
+            sesión, la referencia apunta a un objeto con las siguientes
+            propiedades:
+          </p>
+          <dl>
+            <dt>email</dt>
+            <dd>
+              <p>
+                Referencia al email del usuario. Si el usuario es anónimo, vale
+                <code class="language-javascript">null</code>.
+              </p>
+            </dd>
+            <dt>displayName</dt>
+            <dd>
+              <p>Nombre del usuario.</p>
+            </dd>
+            <dt>photoURL</dt>
+            <dd>
+              <p>URL de la imagen del usuario.</p>
+            </dd>
+          </dl>
+        </dd>
+        <dt>fnError</dt>
+        <dd>
+          <p>
+            Es una función invocada cuando se presenta un error y recibe como
+            parámetro la referencia a una excepción.
+          </p>
+        </dd>
+      </dl>
+      <p>Ejemplo:</p>
+      <pre><code
+          class="language-javascript">auth.onAuthStateChanged(
+  usuario => console.log(usuario),
+  error => console.error(error));</code></pre>
+    </div>
+    <mi-footer></mi-footer>
+  </layout-cajon>
+</body>
+</html>

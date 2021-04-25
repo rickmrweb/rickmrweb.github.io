@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="/js/config.js"></script>
+  <link rel="icon" sizes="32x32" href="/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <layout-cajon>
+    <mi-nav slot="nav"></mi-nav>
+    <h1>Subir archivos</h1>
+    <div class="marco-lectura">
+      <p>La misma instrucción sirve para agregar o modificar el archivo.</p>
+      <p>
+        Los archivos pueden ser de tipo
+        <code class="language-javascript">File</code>
+      </p>
+      <pre><code
+        class="language-javascript">await refArch.put(archivo);</code></pre>
+    </div>
+    <mi-footer></mi-footer>
+  </layout-cajon>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+       initial-scale=1">
+  <title>
+    Recomiendo artistas
+  </title>
+</head>
+<body>
+  <form action="javascript:
+      recomienda();">
+    <h1>Recomiendo artistas</h1>
+    <p>
+      <label>
+        Género
+        <select id=género
+          required>
+          <option value="">
+            -- Selecciona --
+          </option>
+          <option
+            value="reguetón">
+            Reguetón
+          </option>
+          <option
+            value="mariachi">
+            Mariachi
+          </option>
+          <option value="pop">
+            Pop
+          </option>
+          <option value="tango">
+            Tango
+          </option>
+          <option value="balada">
+            Balada
+          </option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <button>
+        Recomendar
+      </button>
+    </p>
+    <figure id="ariana" hidden>
+      <figcaption>
+        Ariana Grande
+      </figcaption>
+      <img alt="Imagen de Ariana
+        Grande"
+        src="https://media.giphy.com/media/Ek42177e6xAeCnh8HX/giphy.gif">
+    </figure>
+    <figure id="badBunny" hidden>
+      <figcaption>
+        Bad Bunny
+      </figcaption>
+      <img alt="Imagen de Bad
+        Bunny"
+        src="https://media.giphy.com/media/kfcsiSjQUyMvEZ1khq/giphy.gif">
+    </figure>
+    <figure id="juanga" hidden>
+      <figcaption>
+        Juan Gabriel
+      </figcaption>
+      <img alt="Imagen de Juan
+        Gabriel"
+        src="https://media.giphy.com/media/3o6ZsYyNQumUyS9t72/giphy.gif">
+    </figure>
+    <figure id="noSe" hidden>
+      <figcaption>
+        No lo sé
+      </figcaption>
+      <img alt="Imagen de que no
+        lo sé"
+        src="https://media.giphy.com/media/VbVfYbxE0gOK5Qsjkc/giphy.gif">
+    </figure>
+    <footer>
+      <p>
+        &copy; 2020
+        Gilberto Pacheco Gallegos.
+      </p>
+    </footer>
+  </form>
+  <script>
+    function recomienda() {
+      const figs = document.
+        querySelectorAll(
+          "figure");
+      for (const f of
+        Array.from(figs)) {
+        f.hidden = true;
+      }
+      switch (género.value) {
+        case "pop":
+          ariana.hidden = false;
+        case "balada":
+        case "mariachi":
+          juanga.hidden = false;
+          break;
+        case "reguetón":
+          badBunny.hidden = false;
+          break;
+        default:
+          noSe.hidden = false;
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

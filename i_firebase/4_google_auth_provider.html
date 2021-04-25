@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="/js/config.js"></script>
+  <link rel="icon" sizes="32x32" href="/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <layout-cajon>
+    <mi-nav slot="nav"></mi-nav>
+    <h1>Google auth provider</h1>
+    <div class="marco-lectura">
+      <p>
+        La clase
+        <a href="https://firebase.google.com/docs/reference/js/firebase.auth.GoogleAuthProvider"
+          target="_blank">firebase.auth.GoogleAuthProvider</a>
+        se conecta al sistema de autenticación Google.
+      </p>
+      <h2>Creación de una instancia</h2>
+      <div><code
+          class="language-javascript">const p = new firebase.auth.GoogleAuthProvider();</code>
+      </div>
+      <h2>Configuración para seleccionar entre una lista de usuarios</h2>
+      <div><code
+          class="language-javascript">p.setCustomParameters({ prompt: "select_account" });</code>
+      </div>
+    </div>
+    <mi-footer></mi-footer>
+  </layout-cajon>
+</body>
+</html>
