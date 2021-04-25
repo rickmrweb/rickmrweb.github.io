@@ -1,4 +1,4 @@
-# gilpgijs.github.io
+# rickmrweb.github.io
 Curso de introducción a JavaScript
 
-https://gilpgijs.github.io
+https://rickmr.github.io
