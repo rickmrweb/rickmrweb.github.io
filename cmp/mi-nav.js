@@ -265,7 +265,7 @@ export class MiNav extends HTMLElement {
             </ol>
           </details>
         </li>
-        <li>
+       <!-- <li>
           <details>
             <summary>
               <h3>Ejemplo de bases de datos</h3>
@@ -315,7 +315,7 @@ export class MiNav extends HTMLElement {
               <li><p><a href="/j_bd/42_LICENSE.html">LICENSE</a></p></li>
             </ol>
           </details>
-        </li>
+        </li> -->
         <li>
           <details>
             <summary>
