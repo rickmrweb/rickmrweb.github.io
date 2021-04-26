@@ -110,7 +110,7 @@ export class MiNav extends HTMLElement {
                     caracteres</a>
                 </p>
               </li>
-              <li><p><a href="/c_html/22_manos.html">Manos a la obra</a></p></li>
+              <!--<li><p><a href="/c_html/22_manos.html">Manos a la obra</a></p></li>-->
               <li><p><a href="/c_html/22_resumen.html">Resumen</a></p></li>
             </ol>
           </details>
