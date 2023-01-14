@@ -1,6 +1,6 @@
 /* Espera 11 minutos después de hacer los cambios en tu sitio, para depués
  * actualizar este archivo. */
-const CACHE = "rickmrweb-1.2.6";
+const CACHE = "rickmrweb-1.2.7";
 
 /** Archivos requeridos para que la aplicación funcione fuera de línea. */
 const ARCHIVOS = [
