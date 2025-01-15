@@ -1,4 +1,4 @@
-/* Espera 11 minutos después de hacer los cambios en tu sitio, para depués
+/* Espera 11 minutos después de hacer los cambios en tu sitio, para después
  * actualizar este archivo. */
 const CACHE = "rickmrweb-1.2.9";
 
